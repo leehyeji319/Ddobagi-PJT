@@ -189,7 +189,7 @@
 
   ```bash
   docker network create ddobagi-net
-  docker network create ddobagi-net
+  docker volume create ddobagi-net
   ```
 
   
