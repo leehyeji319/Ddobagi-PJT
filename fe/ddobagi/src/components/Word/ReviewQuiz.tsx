@@ -87,6 +87,11 @@ const ReviewQuiz: React.FC<QuizProps> = ({
     fetchData();
   }, [userId, quizId]);
 
+  // 퀴즈가 변경되면 이전에 선택한 답안을 초기화한다.
+  useEffect(() => {
+    setSelectedOption("");
+  }, [quizId]);
+
   if (!quizData) {
     return <div>Loading...</div>;
   }

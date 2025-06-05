@@ -103,6 +103,11 @@ const Quiz: React.FC<QuizProps> = ({
     fetchData();
   }, [userId, quizId]);
 
+  // 새 퀴즈가 로딩될 때 선택된 답안을 초기화한다.
+  useEffect(() => {
+    setSelectedOption("");
+  }, [quizId]);
+
   if (!quizData) {
     return <div>Loading...</div>;
   }
